@@ -1,0 +1,26 @@
+{
+  "name": "ziymed/backtowebsite",
+  "type": "flarum-extension",
+  "description": "Button Back to website",
+  "keywords": ["locale", "Arabic", "Language"],
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta-8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ziymed\\BackToWebsite\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+        "title": "Back To Website",
+        "icon": {
+            "image": "icon.svg",
+            "backgroundColor": "#fff",
+            "backgroundSize": "cover",
+            "backgroundPosition": "center"
+        }
+    }
+  }
+}
