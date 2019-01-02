@@ -13,6 +13,8 @@
 namespace Ziyad\BackToWebsite;
 
 use Flarum\Extend;
+use Ziymed\BackToWebsite\Listener;
+use Illuminate\Contracts\Events\Dispatcher;
 
 return [
     (new Extend\Frontend('forum'))
@@ -21,5 +23,9 @@ return [
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js')
         ->css(__DIR__.'/less/admin.less'),
-    new Extend\Locales(__DIR__ . '/locale')
+    new Extend\Locales(__DIR__ . '/locale'),
+
+    function (Dispatcher $events) {
+        $events->subscribe(Listener\AddBackToWebsiteApi::class);
+    },
 ];

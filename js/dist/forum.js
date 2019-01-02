@@ -125,9 +125,9 @@ __webpack_require__.r(__webpack_exports__);
 Object(flarum_extend__WEBPACK_IMPORTED_MODULE_1__["extend"])(flarum_components_HeaderSecondary__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'items', function (items) {
   if (items) {
     items.add('Go Back to Website', flarum_components_LinkButton__WEBPACK_IMPORTED_MODULE_3___default.a.component({
-      children: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('back_to_website.forum.header.back_button'),
+      children: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('backtowebsite.forum.header.back_button'),
       className: 'Button Button--link',
-      href: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.forum.attribute('baseUrl')
+      href: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.forum.attribute('backtoUrl')
     }), 0);
   }
 });
