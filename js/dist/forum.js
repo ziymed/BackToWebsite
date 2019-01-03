@@ -91,7 +91,7 @@ module.exports =
 /*!******************!*\
   !*** ./forum.js ***!
   \******************/
-/*! no exports provided */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -116,19 +116,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_extend__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_extend__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var flarum_components_HeaderSecondary__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/components/HeaderSecondary */ "flarum/components/HeaderSecondary");
 /* harmony import */ var flarum_components_HeaderSecondary__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_components_HeaderSecondary__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var flarum_components_LinkButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! flarum/components/LinkButton */ "flarum/components/LinkButton");
-/* harmony import */ var flarum_components_LinkButton__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(flarum_components_LinkButton__WEBPACK_IMPORTED_MODULE_3__);
-
 
 
 
 Object(flarum_extend__WEBPACK_IMPORTED_MODULE_1__["extend"])(flarum_components_HeaderSecondary__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'items', function (items) {
   if (items) {
-    items.add('Go Back to Website', flarum_components_LinkButton__WEBPACK_IMPORTED_MODULE_3___default.a.component({
-      children: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('backtowebsite.forum.header.back_button'),
-      className: 'Button Button--link',
-      href: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.forum.attribute('backtoUrl')
-    }), 0);
+    var url = flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.forum.attribute('backtoUrl');
+    var children = flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('backtowebsite.forum.header.back_button');
+    items.add('gobackto', m("a", {
+      href: url
+    }, children));
   }
 });
 
@@ -153,17 +150,6 @@ module.exports = flarum.core.compat['app'];
 /***/ (function(module, exports) {
 
 module.exports = flarum.core.compat['components/HeaderSecondary'];
-
-/***/ }),
-
-/***/ "flarum/components/LinkButton":
-/*!**************************************************************!*\
-  !*** external "flarum.core.compat['components/LinkButton']" ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = flarum.core.compat['components/LinkButton'];
 
 /***/ }),
 
