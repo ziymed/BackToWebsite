@@ -10,9 +10,8 @@ extend(HeaderSecondary.prototype, 'items', function(items) {
 		const url = app.forum.attribute('backtoUrl');
 		const children = app.translator.trans('backtowebsite.forum.header.back_button');
 
-		items.add('gobackto', 
-			<a href={url}>{children}</a>
-		);
+		items.add('gobackto', <a class="Button Button--link" href={url}>{children}</a>, 19);
+			
     }
     
 });

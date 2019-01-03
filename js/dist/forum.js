@@ -91,7 +91,7 @@ module.exports =
 /*!******************!*\
   !*** ./forum.js ***!
   \******************/
-/*! no static exports found */
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -124,8 +124,9 @@ Object(flarum_extend__WEBPACK_IMPORTED_MODULE_1__["extend"])(flarum_components_H
     var url = flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.forum.attribute('backtoUrl');
     var children = flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('backtowebsite.forum.header.back_button');
     items.add('gobackto', m("a", {
+      class: "Button Button--link",
       href: url
-    }, children));
+    }, children), 19);
   }
 });
 
