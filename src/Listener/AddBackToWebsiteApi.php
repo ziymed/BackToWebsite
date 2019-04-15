@@ -47,6 +47,7 @@ class AddBackToWebsiteApi
         if ($event->isSerializer(ForumSerializer::class)) {
 
             $event->attributes['backtoUrl'] = $this->settings->get('ziymed-backtowebsite.backto_url');
+            $event->attributes['backtoLabel'] = $this->settings->get('ziymed-backtowebsite.backto_label');
         }
     }
 
