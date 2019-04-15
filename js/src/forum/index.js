@@ -7,10 +7,10 @@ extend(HeaderSecondary.prototype, 'items', function(items) {
 
 	if (items) {
 
-		const url = app.forum.attribute('backtoUrl');
-		const children = app.translator.trans('backtowebsite.forum.header.back_button');
+		const url = app.forum.attribute('backtoUrl') ? app.forum.attribute('backtoUrl') : "#";
+		const label = app.forum.attribute('backtoLabel') ? app.forum.attribute('backtoLabel') : app.translator.trans('backtowebsite.forum.header.back_button');
 
-		items.add('gobackto', <a class="Button Button--link" href={url}>{children}</a>, 19);
+		items.add('gobackto', <a class="Button Button--link" href={url}>{label}</a>, 19);
 			
     }
     
