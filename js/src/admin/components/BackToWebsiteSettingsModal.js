@@ -13,7 +13,9 @@ export default class BackToWebsiteSettingsModal extends SettingsModal {
     return [
       <div className="Form-group">
         <label>{app.translator.trans('backtowebsite.admin.settings.backto_url_label')}</label>
-        <input className="FormControl" bidi={this.setting('ziymed-backtowebsite.backto_url')}/>
+        <input required className="FormControl" bidi={this.setting('ziymed-backtowebsite.backto_url')}/>
+        <label>{app.translator.trans('backtowebsite.admin.settings.backto_label_label')}</label>
+        <input className="FormControl" bidi={this.setting('ziymed-backtowebsite.backto_label')}/>
       </div>
     ];
   }
